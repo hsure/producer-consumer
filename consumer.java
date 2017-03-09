@@ -30,7 +30,7 @@ public class WriterThread implements Runnable{
             String buffer = blockingQueue.take();
             n = rand.nextInt(50) + 1;
             //If this thread gets the key
-            if((blockingQueue.maxsize()-blockingQueue.size() >= n)){
+            if((blockingQueue.maxsize()-blockingQueue.size() <= n)){
                 	mutex.acquire();
                     
                     //If this thread gets the key
