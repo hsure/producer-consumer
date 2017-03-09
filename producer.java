@@ -14,9 +14,10 @@ public class ReaderThread implements Runnable{
   protected int num;
   protected static Semaphore mutex;
 
-  public ReaderThread(CircularFifoQueue<char> blockingQueue,int num){
+  public ReaderThread(CircularFifoQueue<char> blockingQueue,int num, Semaphore mutex){
     this.blockingQueue = blockingQueue;     
    	this.num = num;
+    this.mutex = mutex;
   }
 
   @Override
