@@ -12,9 +12,10 @@ public class WriterThread implements Runnable{
   protected int num;
   protected static Semaphore mutex;
 
-  public WriterThread(CircularFifoQueue<char> blockingQueue, int num){
+  public WriterThread(CircularFifoQueue<char> blockingQueue, int num, Semaphore mutex){
     this.blockingQueue = blockingQueue;   
     this.num = num;
+    this.mutex = mutex;
   }
 
   @Override
