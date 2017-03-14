@@ -5,6 +5,7 @@ import java.util.concurrent.BlockingQueue;
 import java.util.Random;
 import java.util.concurrent.Semaphore;
 
+//consumer thread
 
 public class WriterThread implements Runnable{
 
